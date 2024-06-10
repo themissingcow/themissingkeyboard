@@ -21,7 +21,9 @@
 #include <string.h>
 #include "themissingkeyboard.h"
 
+#ifdef DISABLE_BITC_LED
 #include "bit-c_led.h"
+#endif
 
 
 enum themissingkeyboard_layers {
@@ -208,7 +210,9 @@ const rgblight_segment_t* const PROGMEM tmk_rgblight_layers[] = RGBLIGHT_LAYERS_
 
 void keyboard_post_init_user(void) {
 	rgblight_layers = tmk_rgblight_layers;
+#ifdef DISABLE_BITC_LED
 	set_bit_c_LED(LED_OFF);
+#endif
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {

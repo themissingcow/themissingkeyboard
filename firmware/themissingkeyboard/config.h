@@ -33,6 +33,9 @@
 #define SERIAL_USE_MULTI_TRANSACTION
 #define SPLIT_TRANSPORT_MIRROR
 
+// Bit-c MCUs
+#define DISABLE_BITC_LED
+
 // Key LEDs (RGB)
 
 #define WS2812_DI_PIN D3
