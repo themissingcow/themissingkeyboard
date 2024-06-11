@@ -9,7 +9,7 @@ the [KLOR](https://github.com/GEIGEIGEIST/KLOR).
 - Home row mods.
 - Per-key RGB matrix.
 - Minimal 3-board construction.
-- Choc v1 hotswap (or soldered KS-27*)
+- Choc v1 hotswap (or soldered KS-27[^1])
 
 It has the same staggered key layout as KLOR, but with a smaller
 footprint.
@@ -25,7 +25,7 @@ footprint.
 Aside from the PCBs, you'll most likely need:
 
 - 42 Choc v1 hotswap (or KS-27*) sockets + key switches.
-- 2x ProMicro ATmega32U4 or compatible MCUs (machine pin sockets
+- 2x [ProMicro ATmega32U4 or compatible MCUs[^2] (machine pin sockets
   recommended).
 - 42x SK6812 Mini LED (not Mini-E) 3535 size.
 - 2x PTS636 reset switches.
@@ -64,4 +64,5 @@ the original design, and
 version.
 
 ----
-*I've only ever built this with chocs.
+[^1]: I've only ever built this with chocs.
+[^2]: [Nullbits](https://nullbits.co/bit-c/) make some great MCUs.
