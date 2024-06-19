@@ -165,21 +165,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * ADJUST
   *
              ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │ QWERTY  │         │         │  ee clr │         │                    │         │         │         │ rgb vi  │         │
+             │ QWERTY  │         │         │  ee clr │         │                    │   F7    │   F8    │   F9    │ rgb vi  │         │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │         │         │         │         │         │         │                    │         │         │         │ rgb tog │         │         │
+   │         │         │         │         │         │         │                    │   F4    │   F5    │   F6    │ rgb tog │         │         │
    ├─────────┼─────────┼──────── ┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │         │         │         │ COLEMAK │         │         │                    │         │         │         │ rgb vd  │         │         │
+   │         │         │         │ COLEMAK │         │         │                    │   F1    │   F2    │   F3    │ rgb vd  │         │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┐┌─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │    ▼    │    ▼    │    ▼    │    ▼    ││    ▼    │    ▼    │    ▼    │    ▼    │
+                                 │    ▼    │    ▼    │    ▼    │    ▼    ││    ▼    │   F10   │   F11   │   F12   │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘
   */
 
    [_ADJUST] = LAYOUT(
-              QWERTY,   XXXXXXX,  XXXXXXX,  EE_CLR,   XXXXXXX,                       XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_VAI,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                       XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_TOG,  XXXXXXX,   XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  COLEMAK,  XXXXXXX,  XXXXXXX,                       XXXXXXX,  XXXXXXX,  XXXXXXX,  RGB_VAD,  XXXXXXX,   XXXXXXX,
-                                  _______,  _______,  _______,  _______,   _______,  _______,  _______,  _______
+              QWERTY,   XXXXXXX,  XXXXXXX,  EE_CLR,   XXXXXXX,                       KC_F7,    KC_F8,    KC_F9,  RGB_VAI,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                       KC_F4,    KC_F5,    KC_F6,  RGB_TOG,  XXXXXXX,   XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  COLEMAK,  XXXXXXX,  XXXXXXX,                       KC_F1,    KC_F2,    KC_F3,  RGB_VAD,  XXXXXXX,   XXXXXXX,
+                                  _______,  _______,  _______,  _______,   _______,  KC_F10,   KC_F11,   KC_F12
  )
 
 };
@@ -199,7 +199,9 @@ const rgblight_segment_t PROGMEM rgblight_layer_upper[] = RGBLIGHT_LAYER_SEGMENT
 );
 
 const rgblight_segment_t PROGMEM rgblight_layer_adj[] = RGBLIGHT_LAYER_SEGMENTS(
-    {18, 1, HSV_GOLD}, {10, 1, HSV_GOLD}, {35, 1, HSV_GOLD}
+    {18, 1, HSV_GOLD}, {10, 1, HSV_GOLD}, {35, 1, HSV_GOLD},
+	// F-keys
+    {24, 6, HSV_TEAL}, {30, 4, HSV_TEAL}, {22, 2, HSV_TEAL}
 );
 
 const rgblight_segment_t* const PROGMEM tmk_rgblight_layers[] = RGBLIGHT_LAYERS_LIST(
